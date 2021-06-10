@@ -1,38 +1,3 @@
-/* PRIMERA OPCION 
-const body = document.querySelector("body");
-const h1 = document.querySelector("h1");
-const items = document.querySelectorAll(".item");
-const h2 = document.querySelectorAll("h2");
-const p = document.querySelectorAll("div p");
-const button = document.querySelector("button");
-
-//const confirmar = confirm("Desea activar el Dark Mode");
-button.addEventListener("click", ()=>changeMode());
-
-function changeMode() {
-    body.classList.toggle("dark-mode-body");
-    h1.classList.toggle("dark-mode-h1");
-    items.forEach(item => item.classList.toggle("dark-mode-items"));
-    h2.forEach(h2 => h2.classList.toggle("dark-mode-item-text"));
-    p.forEach(p => p.classList.toggle("dark-mode-item-text"));
-}
-*/
-
-/* CORRECCIONES */
-
-// [buenas prácticas]
-// - Usar const en lugar de let ya que no volveremos a modificar las variables
-
-// [tip]
-// agrega la siguiente linea en las propiedades de css del body
-// transition: all 300ms linear;
-// prueba de nuevo cambiar a modo escuro 😉
-// ojo: no es buena practica agregar la propiedad transition al body, pero para tener en cuenta....
-
-// [desafío]
-// - hay una forma de aplicar el modo oscuro obteniendo un unico elemento del HTML
-
-// OPTIMIZACION
 const body = document.querySelector("body");
 const button = document.querySelector("button");
 button.addEventListener("click", () => changeMode());
@@ -40,12 +5,6 @@ function changeMode() {
     body.classList.toggle("dark");
 }
 
-// Uso de setInterval()
-/*
-setInterval(()=>{
-        body.classList.toggle("dark");
-    },3000);
-*/
 const contenedor = document.querySelector(".contenedor");
 
 function crearNoticia(urlImagen, titulo, contenido) {
@@ -59,9 +18,6 @@ function crearNoticia(urlImagen, titulo, contenido) {
 
     contenedor.innerHTML += template;
 }
-
-// const personalizada = prompt("Cuál desea que sea el título del artículo?"); crearNoticia(urlImagen, personalizada, contenido);
-
 
 const noticias = [
     {
