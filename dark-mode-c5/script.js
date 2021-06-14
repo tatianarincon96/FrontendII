@@ -71,9 +71,11 @@ const noticias = [
     }
 ]
 
-crearNoticia(noticias[0].imagen, noticias[0].titulo, noticias[0].cuerpoNoticia);
-crearNoticia(noticias[1].imagen, noticias[1].titulo, noticias[1].cuerpoNoticia);
-crearNoticia(noticias[2].imagen, noticias[2].titulo, noticias[2].cuerpoNoticia);
-crearNoticia(noticias[3].imagen, noticias[3].titulo, noticias[3].cuerpoNoticia);
-crearNoticia(noticias[4].imagen, noticias[4].titulo, noticias[4].cuerpoNoticia);
-crearNoticia(noticias[5].imagen, noticias[5].titulo, noticias[5].cuerpoNoticia);
+function cargarNoticia(array) {
+    for (let i = 0; i < array.length; i++) {
+        const noticia = array[i];
+        crearNoticia(noticia.imagen,noticia.titulo,noticia.cuerpoNoticia);
+    }
+}
+
+cargarNoticia(noticias);
